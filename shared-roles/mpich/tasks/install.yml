@@ -1,0 +1,17 @@
+---
+# tasks file for mpich install
+
+- name: create mpich dorectory
+  file: path={{ mpich_prefix }} state=directory owner=root group=root mode=0755
+
+- name: download mpich
+  get_url: url={{ mpich_url }} dest=/tmp/mpich-{{ mpich_version }}.tar.gz
+
+- name: extract mpich tarball
+  unarchive: copy=no src=/tmp/mpich-{{ mpich_version }}.tar.gz dest=/tmp creates=/tmp/mpich-{{ mpich_version }}
+
+- name: install mpich
+  shell: ./configure --prefix={{ mpich_prefix }} && make && make install
+  args:
+    chdir: /tmp/mpich-{{ mpich_version }}
+    creates: "{{ mpich_prefix}}/lib"

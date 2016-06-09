@@ -1,0 +1,6 @@
+---
+# defaults file for mpich
+
+mpich_version: 3.2
+mpich_url: http://www.mpich.org/static/downloads/{{ mpich_version }}/mpich-{{ mpich_version }}.tar.gz
+mpich_prefix: /opt/mpich/{{ mpich_version }}

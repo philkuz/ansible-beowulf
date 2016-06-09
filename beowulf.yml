@@ -1,0 +1,16 @@
+---
+
+- name: Preparing all pis 
+  hosts: all 
+  roles: 
+    - { role: erlang, tags: ['erlang'] }
+    - { role: mpich, tags: ['mpich'] }
+
+# - name: Prepare master node
+#   hosts: master
+#   roles:
+#     - { role: dhcp, tags: ['dhcp'] }
+
+#- name: Prepare slaves
+#  hosts: 
+  

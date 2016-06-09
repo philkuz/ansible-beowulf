@@ -1,0 +1,9 @@
+# From galaxy
+- src: kbrebanov.erlang
+  name: erlang
+
+- src: RDI2.mpich
+  name: mpich
+
+- src: bertvv.dhcp
+  name: dhcp

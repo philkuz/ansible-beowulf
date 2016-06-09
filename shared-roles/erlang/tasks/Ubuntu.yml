@@ -1,0 +1,29 @@
+---
+# tasks file for erlang (Ubuntu specific)
+
+- name: Install Erlang Solutions PGP key
+  become: yes
+  apt_key:
+    url: http://packages.erlang-solutions.com/ubuntu/erlang_solutions.asc
+    state: present
+  tags:
+    - erlang
+
+- name: Add Erlang Solutions repository
+  become: yes
+  apt_repository:
+    repo: 'deb http://packages.erlang-solutions.com/ubuntu trusty contrib'
+    state: present
+  tags:
+    - erlang
+
+- name: Install Erlang packages
+  become: yes
+  apt:
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+  with_items:
+    - "{{ erlang_packages }}"
+  tags:
+    - erlang

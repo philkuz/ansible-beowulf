@@ -1,0 +1,7 @@
+---
+
+# change this to install other packages
+erlang_extra_packages: []
+
+erlang_repo_package_url: https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb
+tmp_dir: /tmp

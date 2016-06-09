@@ -1,0 +1,14 @@
+galaxy_info:
+  author: Kevin Brebanov
+  description: Installs Erlang
+  company:
+  license: BSD
+  min_ansible_version: 1.9
+  github_branch: master
+  platforms:
+    - name: Ubuntu
+      versions:
+        - trusty
+  galaxy_tags:
+    - development
+dependencies: []

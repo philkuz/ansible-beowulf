@@ -1,0 +1,11 @@
+# OS Specific
+.DS_Store
+
+# Ansible related
+*.retry
+
+# Vagrant  
+.vagrant/
+
+# Build
+*.py[co]

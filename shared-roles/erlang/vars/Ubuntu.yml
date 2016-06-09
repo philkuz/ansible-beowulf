@@ -1,0 +1,5 @@
+---
+# vars file for erlang (Ubuntu specific)
+
+erlang_packages:
+  - esl-erlang=1:{{ erlang_version }}

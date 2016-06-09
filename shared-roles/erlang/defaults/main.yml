@@ -1,0 +1,4 @@
+---
+# defaults file for erlang
+
+erlang_version: 18.3

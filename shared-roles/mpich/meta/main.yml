@@ -1,0 +1,15 @@
+---
+galaxy_info:
+  author: Koji Tanaka
+  description:
+  company: RDI2
+  license: MIT license
+  min_ansible_version: 1.9
+  platforms:
+  - name: EL
+    versions:
+    - 6
+  categories:
+  - packaging
+  - system
+dependencies: []
